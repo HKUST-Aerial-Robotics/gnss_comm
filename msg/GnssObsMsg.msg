@@ -1,0 +1,13 @@
+GnssTimeMsg time
+uint32 sat
+float64[] freqs
+float64[] CN0
+uint8[] LLI
+uint8[] code
+float64[] psr
+float64[] psr_std
+float64[] cp
+float64[] cp_std
+float64[] dopp
+float64[] dopp_std
+uint8[]   status

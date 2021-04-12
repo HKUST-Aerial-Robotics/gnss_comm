@@ -1,0 +1,17 @@
+GnssTimeMsg time
+uint8   fix_type
+bool    valid_fix
+bool    diff_soln
+uint8   carr_soln
+uint8   num_sv
+float64 latitude
+float64 longitude
+float64 altitude
+float64 height_msl
+float64 h_acc
+float64 v_acc
+float64 p_dop
+float64 vel_n
+float64 vel_e
+float64 vel_d
+float64 vel_acc

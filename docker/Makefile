@@ -5,12 +5,11 @@ help:
 	@echo "-- Help Menu"
 	@echo ""
 	@echo "   1. make build              - build all images"
-	# @echo "   1. make pull             - pull all images"
 	@echo "   1. make clean              - remove all images"
 	@echo ""
 
 build:
-	@docker build --tag ros:gnss_comm -f ./Dockerfile ..
+	@docker build --tag gnss_comm -f ./Dockerfile ..
 
 clean:
-	@docker rmi -f ros:gnss_comm
+	@docker rmi -f gnss_comm

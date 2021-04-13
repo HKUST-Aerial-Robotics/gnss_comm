@@ -43,9 +43,18 @@ cd ~/catkin_ws/
 catkin_make
 source ~/catkin_ws/devel/setup.bash
 ```
+If you encounter any problem during the building of *gnss_comm*, try with docker in [the next section](#docker_section).
 
-## 3. Acknowledgements
+## 3. <a name="docker_section"></a>Docker Support
+To simplify the building process, we add docker in our code. Docker is like a sandbox so it can isolate our code from your local environment. To run with docker, first make sure [ros](http://wiki.ros.org/ROS/Installation) and [docker](https://docs.docker.com/get-docker/) are installed on your machine. Then add your account to `docker` group by `sudo usermod -aG docker $USER`. **Relaunch the terminal or logout and re-login if you get `Permission denied` error**, type:
+```
+cd ~/catkin_ws/src/gnss_comm/docker
+make build
+```
+The docker image `gnss_comm:latest` should be successfully built after a while. Then you can check all available docker images in your local machine by `docker image ls` command.
+
+## 4. Acknowledgements
 Many of the definitions and utility functions in this package are adapted from [RTKLIB](http://www.rtklib.com/).
 
-## 4. License
+## 5. License
 The source code is released under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html) license.

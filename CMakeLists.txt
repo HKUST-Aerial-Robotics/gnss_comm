@@ -14,11 +14,11 @@ find_package(catkin REQUIRED COMPONENTS
 
 file(GLOB_RECURSE message_files ${PROJECT_SOURCE_DIR}/msg/*.msg)
 add_message_files(FILES 
+    GnssTimeMsg.msg
     GnssEphemMsg.msg
     GnssGloEphemMsg.msg
     GnssMeasMsg.msg
     GnssObsMsg.msg
-    GnssTimeMsg.msg
     GnssBestXYZMsg.msg
     GnssPVTSolnMsg.msg
     GnssSvsMsg.msg
@@ -59,3 +59,4 @@ target_include_directories(${PROJECT_NAME} PUBLIC
   ${PROJECT_SOURCE_DIR}/include/${PROJECT_NAME}/
 )
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GLOG_LIBRARIES})
+add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_generate_messages_cpp)

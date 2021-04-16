@@ -1,3 +1,5 @@
+# This message contains GPS, Galileo and BeiDou ephemeris data
+
 uint32 sat
 GnssTimeMsg ttr
 GnssTimeMsg toe

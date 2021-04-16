@@ -261,7 +261,8 @@ namespace gnss_comm
     {
         int i;
         
-        for (i=0;leaps[i][0]>0;i++) {
+        for (i=0;leaps[i][0]>0;i++) 
+        {
             if (time_diff(t,epoch2time(leaps[i]))>=0.0) return time_add(t,-leaps[i][6]);
         }
         return t;

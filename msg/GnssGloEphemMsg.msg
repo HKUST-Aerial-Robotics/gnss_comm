@@ -1,3 +1,5 @@
+# This message contains GLONASS ephemeris data
+
 uint32 sat
 GnssTimeMsg ttr
 GnssTimeMsg toe

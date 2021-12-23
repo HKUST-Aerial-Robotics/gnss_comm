@@ -18,7 +18,9 @@
 * along with gnss_comm. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "gnss_ros.hpp"
+#include "gnss_comm/gnss_ros.hpp"
+
+using namespace gnss_comm_msgs;
 
 namespace gnss_comm
 {

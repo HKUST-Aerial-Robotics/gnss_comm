@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>gnss_comm</name>
+  <version>1.0.0</version>
+  <description>Definitions and utility functions for GNSS</description>
+
+  <maintainer email="mcamurri@robots.ox.ac.uk">Marco Camurri</maintainer>
+  <maintainer email="jbeuchert@oxfordrobotics.institute">Jonas Beuchert</maintainer>
+
+  <license>GPLv3</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <build_depend>rospy</build_depend>
+  <depend>gnss_comm_msgs</depend>
+
+  <exec_depend>rospy</exec_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+  </export>
+</package>

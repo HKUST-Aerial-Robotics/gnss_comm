@@ -18,8 +18,8 @@
 * along with gnss_comm. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "gnss_spp.hpp"
-#include "gnss_utility.hpp"
+#include "gnss_comm/gnss_spp.hpp"
+#include "gnss_comm/gnss_utility.hpp"
 #include <glog/logging.h>
 
 #define CUT_OFF_DEGREE 15.0

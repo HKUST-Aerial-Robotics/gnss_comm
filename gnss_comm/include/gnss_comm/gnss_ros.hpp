@@ -22,19 +22,19 @@
 #define GNSS_ROS_HPP_
 
 #include <ros/ros.h>
-#include <gnss_comm/GnssTimeMsg.h>
-#include <gnss_comm/GnssEphemMsg.h>
-#include <gnss_comm/GnssGloEphemMsg.h>
-#include <gnss_comm/GnssObsMsg.h>
-#include <gnss_comm/GnssMeasMsg.h>
-#include <gnss_comm/GnssBestXYZMsg.h>
-#include <gnss_comm/GnssPVTSolnMsg.h>
-#include <gnss_comm/GnssSvsMsg.h>
-#include <gnss_comm/GnssTimePulseInfoMsg.h>
-#include <gnss_comm/StampedFloat64Array.h>
+#include <gnss_comm_msgs/GnssTimeMsg.h>
+#include <gnss_comm_msgs/GnssEphemMsg.h>
+#include <gnss_comm_msgs/GnssGloEphemMsg.h>
+#include <gnss_comm_msgs/GnssObsMsg.h>
+#include <gnss_comm_msgs/GnssMeasMsg.h>
+#include <gnss_comm_msgs/GnssBestXYZMsg.h>
+#include <gnss_comm_msgs/GnssPVTSolnMsg.h>
+#include <gnss_comm_msgs/GnssSvsMsg.h>
+#include <gnss_comm_msgs/GnssTimePulseInfoMsg.h>
+#include <gnss_comm_msgs/StampedFloat64Array.h>
 
-#include "gnss_constant.hpp"
-#include "gnss_utility.hpp"
+#include "gnss_comm/gnss_constant.hpp"
+#include "gnss_comm/gnss_utility.hpp"
 
 namespace gnss_comm
 {
@@ -42,73 +42,73 @@ namespace gnss_comm
     * args   : Ephem &  ephem      I   Ephemeris
     * return : cooresponding ephemeris message
     *-----------------------------------------------------------------------------*/
-    GnssEphemMsg ephem2msg(const EphemPtr &ephem_ptr);
+    gnss_comm_msgs::GnssEphemMsg ephem2msg(const EphemPtr &ephem_ptr);
 
     /* parse Ephem struct from ros message ----------------------------------------------
     * args   : GnssEphemConstPtr &  gnss_ephem_msg  I   Ephemeris ros message
     * return : cooresponding ephemeris struct
     *-----------------------------------------------------------------------------------*/
-    EphemPtr msg2ephem(const GnssEphemMsgConstPtr &gnss_ephem_msg);
+    EphemPtr msg2ephem(const gnss_comm_msgs::GnssEphemMsgConstPtr &gnss_ephem_msg);
 
     /* convert GloEphem struct to ros message ---------------------------------------
     * args   : GloEphem &  glo_ephem      I   GLONASS Ephemeris
     * return : cooresponding ephemeris message
     *-----------------------------------------------------------------------------*/
-    GnssGloEphemMsg glo_ephem2msg(const GloEphemPtr &glo_ephem_ptr);
+    gnss_comm_msgs::GnssGloEphemMsg glo_ephem2msg(const GloEphemPtr &glo_ephem_ptr);
 
     /* parse GloEphem struct from ros message ----------------------------------------------
     * args   : GnssGloEphemConstPtr & gnss_glo_ephem_msg  I   GLONASS Ephemeris ros message
     * return : cooresponding GLONASS ephemeris struct
     *--------------------------------------------------------------------------------------*/
-    GloEphemPtr msg2glo_ephem(const GnssGloEphemMsgConstPtr &gnss_glo_ephem_msg);
+    GloEphemPtr msg2glo_ephem(const gnss_comm_msgs::GnssGloEphemMsgConstPtr &gnss_glo_ephem_msg);
 
     /* convert GNSS measurements to ros message ----------------------------------
     * args   : std::vector<ObsPtr> & meas      I   GNSS measurements
     * return : cooresponding GNSS measurement message
     *-----------------------------------------------------------------------------*/
-    GnssMeasMsg meas2msg(const std::vector<ObsPtr> &meas);
+    gnss_comm_msgs::GnssMeasMsg meas2msg(const std::vector<ObsPtr> &meas);
 
     /* parse GNSS measurements from ros message ----------------------------------
     * args   : GnssMeasConstPtr & gnss_meas_msg      I   GNSS measurement message
     * return : cooresponding GNSS measurements
     *-----------------------------------------------------------------------------*/
-    std::vector<ObsPtr> msg2meas(const GnssMeasMsgConstPtr &gnss_meas_msg);
+    std::vector<ObsPtr> msg2meas(const gnss_comm_msgs::GnssMeasMsgConstPtr &gnss_meas_msg);
 
     /* convert GNSS time pulse information to ros message ----------------------------------
     * args   : TimePulseInfoPtr tp_info      I   GNSS time pulse information
     * return : cooresponding GNSS time pulse information message
     *-----------------------------------------------------------------------------*/
-    GnssTimePulseInfoMsg tp_info2msg(const TimePulseInfoPtr &tp_info);
+    gnss_comm_msgs::GnssTimePulseInfoMsg tp_info2msg(const TimePulseInfoPtr &tp_info);
 
     /* parse GNSS time pulse information from ros message ---------------------------------
     * args   : GnssTimePulseInfoMsgConstPtr gnss_tp_info_msg   I   GNSS time pulse message
     * return : cooresponding GNSS time pulse information
     *-----------------------------------------------------------------------------*/
-    TimePulseInfoPtr msg2tp_info(const GnssTimePulseInfoMsgConstPtr &gnss_tp_info_msg);
+    TimePulseInfoPtr msg2tp_info(const gnss_comm_msgs::GnssTimePulseInfoMsgConstPtr &gnss_tp_info_msg);
 
     /* convert GNSS best estimated xyz to ros message ----------------------------
     * args   : BestXYZ & best_xyz      I   GNSS estimated xyz in ECEF
     * return : cooresponding GNSS best xyz message
     *-----------------------------------------------------------------------------*/
-    GnssBestXYZMsg best_xyz2msg(const BestXYZPtr &best_xyz);
+    gnss_comm_msgs::GnssBestXYZMsg best_xyz2msg(const BestXYZPtr &best_xyz);
 
     /* convert GNSS PVT solution to ros message -----------------------------------
     * args   : PVTSolutionPtr & pvt_soln      I   GNSS PVT solution
     * return : cooresponding GNSS PVT solution message
     *-----------------------------------------------------------------------------*/
-    GnssPVTSolnMsg pvt2msg(const PVTSolutionPtr &pvt_soln);
+    gnss_comm_msgs::GnssPVTSolnMsg pvt2msg(const PVTSolutionPtr &pvt_soln);
 
     /* parse GNSS PVT solution from ros message ---------------------------------
     * args   : GnssPVTSolnMsgConstPtr pvt_msg   I   GNSS PVT solution message
     * return : cooresponding GNSS PVT solution
     *-----------------------------------------------------------------------------*/
-    PVTSolutionPtr msg2pvt(const GnssPVTSolnMsgConstPtr &pvt_msg);
+    PVTSolutionPtr msg2pvt(const gnss_comm_msgs::GnssPVTSolnMsgConstPtr &pvt_msg);
 
     /* convert GNSS space vehicles' info to ros message ----------------------------
     * args   : std::vector<SvInfo> & svs      I   GNSS space vehicles' info
     * return : cooresponding GNSS space vehicle info message
     *-----------------------------------------------------------------------------*/
-    GnssSvsMsg svs2msg(const std::vector<SvInfo> &svs);
+    gnss_comm_msgs::GnssSvsMsg svs2msg(const std::vector<SvInfo> &svs);
 
 }   // namespace gnss_comm
 

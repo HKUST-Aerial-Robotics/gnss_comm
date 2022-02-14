@@ -29,7 +29,7 @@
 *         Copyright (c) 2007-2020, T. Takasu, All rights reserved.
 */
 
-#include "gnss_utility.hpp"
+#include "gnss_comm/gnss_utility.hpp"
 
 namespace gnss_comm
 {

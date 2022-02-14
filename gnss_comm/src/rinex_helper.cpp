@@ -18,7 +18,7 @@
 * along with gnss_comm. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "rinex_helper.hpp"
+#include "gnss_comm/rinex_helper.hpp"
 
 namespace gnss_comm
 {
